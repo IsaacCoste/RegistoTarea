@@ -43,7 +43,6 @@ fun HomeScreen(navController: NavController) {
                     .padding(horizontal = 10.dp)
                     .padding(innerPadding),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
             ) {
                 OutlinedButton(
                     onClick = { navController.navigate(Screen.UsuarioList) }
@@ -54,6 +53,23 @@ fun HomeScreen(navController: NavController) {
                     )
                 }
                 OutlinedButton(
+                    onClick = { navController.navigate(Screen.ProyectoList) }
+                ) {
+                    Text(
+                        text = "Proyectos",
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 10.dp)
+                    .padding(innerPadding),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                OutlinedButton(
                     onClick = { navController.navigate(Screen.TareaList) }
                 ) {
                     Text(
@@ -63,21 +79,6 @@ fun HomeScreen(navController: NavController) {
                 }
             }
         }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 10.dp)
-                .padding(innerPadding),
-            horizontalArrangement = Arrangement.SpaceBetween,
-        ) {
-            OutlinedButton(
-                onClick = { navController.navigate(Screen.ProyectoList) }
-            ) {
-                Text(
-                    text = "Proyectos",
-                    modifier = Modifier.padding(8.dp)
-                )
-            }
-        }
+
     }
 }
